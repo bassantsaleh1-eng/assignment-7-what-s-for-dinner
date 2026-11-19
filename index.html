@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's For Dinner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-in">
+      <div class="brand">
+        <div class="logo"><i class="fa-solid fa-utensils"></i></div>
+        <div>
+          <h1>What's For Dinner</h1>
+          <p>Your daily meal inspiration</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="top-btn" type="button" aria-label="Saved recipes"><i class="fa-solid fa-bookmark"></i></button>
+        <button class="top-btn" type="button" aria-label="History"><i class="fa-solid fa-clock-rotate-left"></i></button>
+        <button class="top-btn" type="button" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+        <div class="avatar"><i class="fa-solid fa-user"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="recipe-card" id="recipe-card">
+      <!-- Left: photo + stats -->
+      <section class="recipe-media">
+        <div class="hero" id="hero"></div>
+        <div class="rating" id="rating"></div>
+        <div class="stats">
+          <div class="stat">
+            <i class="fa-solid fa-clock" style="color:#ff6b00"></i>
+            <span>Prep Time</span>
+            <strong id="prep-time"></strong>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-fire-burner" style="color:#e63946"></i>
+            <span>Cook Time</span>
+            <strong id="cook-time"></strong>
+          </div>
+          <div class="stat">
+            <i class="fa-solid fa-users" style="color:#3b82f6"></i>
+            <span>Servings</span>
+            <strong id="servings"></strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: details -->
+      <section class="recipe-body">
+        <div class="body-top">
+          <div class="tags" id="tags"></div>
+          <div class="body-actions">
+            <button class="icon-btn" id="bookmark-btn" type="button" aria-pressed="false" aria-label="Save recipe"><i class="fa-solid fa-bookmark"></i></button>
+            <button class="icon-btn" id="share-btn" type="button" aria-label="Copy recipe name"><i class="fa-solid fa-share-nodes"></i></button>
+          </div>
+        </div>
+
+        <h2 id="meal-name"></h2>
+        <p class="description" id="meal-description"></p>
+
+        <div class="alert" id="alert" hidden>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <div>
+            <strong>Extended Preparation Time</strong>
+            <p>This recipe requires more than 45 minutes to prepare. Plan accordingly!</p>
+          </div>
+        </div>
+
+        <nav class="tabs" id="tabs" role="tablist">
+          <button class="tab active" type="button" role="tab" data-tab="ingredients"><i class="fa-solid fa-list-check"></i> Ingredients</button>
+          <button class="tab" type="button" role="tab" data-tab="instructions"><i class="fa-solid fa-book-open"></i> Instructions</button>
+          <button class="tab" type="button" role="tab" data-tab="nutrition"><i class="fa-solid fa-chart-pie"></i> Nutrition</button>
+          <button class="tab" type="button" role="tab" data-tab="tips"><i class="fa-solid fa-lightbulb"></i> Chef's Tips</button>
+        </nav>
+
+        <div class="tab-content" id="tab-content" tabindex="0"></div>
+
+        <div class="footer">
+          <button class="primary-btn" id="another-btn" type="button">
+            <i class="fa-solid fa-rotate"></i> Try Another Recipe
+          </button>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
